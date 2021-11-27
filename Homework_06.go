@@ -46,49 +46,56 @@ func showMenu() {
 	fmt.Println("=====================================")
 }
 
+type Circle int
+
 //圓形
 func calculateCircle() {
-	var Circle int
+	var cir Circle
 
 	fmt.Print("請輸入「整數」半徑：")
-	fmt.Scan(&Circle)
+	fmt.Scan(&cir)
 
-	fmt.Printf("面積：%.2f\n", getCircleArea(Circle))
+	fmt.Printf("面積：%.2f\n", cir.getCircleArea())
 }
-func getCircleArea(a int) float64 {
+func (a Circle) getCircleArea() float64 {
 	pi := math.Pi
 	circleReturn := float64(a) * float64(a) * pi
 	return circleReturn
 }
 
+type Triangle [2]int
+
 //三角形
 func calculateTriangle() {
-	var Triangle [2]int
+	var tri Triangle
 
 	fmt.Print("請輸入「整數」底：")
-	fmt.Scan(&Triangle[0])
+	fmt.Scan(&tri[0])
 	fmt.Print("請輸入「整數」高：")
-	fmt.Scan(&Triangle[1])
+	fmt.Scan(&tri[1])
 
-	fmt.Printf("面積：%.2f\n", getTriangleArea(Triangle[0], Triangle[1]))
+	fmt.Printf("面積：%.2f\n", tri.getTriangleArea())
 }
-func getTriangleArea(a, b int) float64 {
-	triangleReturn := float64(a) * float64(b) / 2
+func (a Triangle) getTriangleArea() float64 {
+	triangleReturn := float64(a[0]) * float64(a[1]) / 2
 	return triangleReturn
 }
 
+type Rectangle [2]int
+
 //矩形
 func calculateRectangle() {
-	var Rectangle [2]int
+	var rec Rectangle
 
 	fmt.Print("請輸入「整數」底：")
-	fmt.Scan(&Rectangle[0])
+	fmt.Scan(&rec[0])
 	fmt.Print("請輸入「整數」高：")
-	fmt.Scan(&Rectangle[1])
+	fmt.Scan(&rec[1])
 
-	fmt.Printf("面積：%d\n", getRectangleArea(Rectangle[0], Rectangle[1]))
+	fmt.Printf("面積：%d\n", rec.getRectangleArea())
 }
-func getRectangleArea(a, b int) int {
-	rectangleReturn := a * b
-	return rectangleReturn
+func (a Rectangle) getRectangleArea() int {
+	rectangleReturn := a[0] * a[1]
+	return int(rectangleReturn)
 }
+
