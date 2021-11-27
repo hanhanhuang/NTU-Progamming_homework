@@ -71,18 +71,7 @@ func showMenu() {
 func importStudentName() {
 	importByte, err := ioutil.ReadFile("StudentList.txt")
 	if err != nil {
-		//error := errors.New(string(err.Error()))
-
-		//err2 := errors.New(";kjf")
 		fmt.Print(err.Error())
-		//fmt.Print(err2) // 取得錯誤訊息
-		//er2 := err.Error()
-		//fmt.Println(er2)
-		//err2.Error()
-		//log.Fatal(err)
-		//fmt.Println()
-		//fmt.Print(err)
-
 	}
 	//fmt.Print("byte:\n", importByte)
 	importString := string(importByte)
