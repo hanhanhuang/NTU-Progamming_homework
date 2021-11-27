@@ -12,4 +12,4 @@
 
 * `HW06 - 圖形面積計算機` : 函式 Function、一級函式 First-Class Function、自訂義型別、方法 Method
 
-* `HW06 - 簡易成績登記冊` : 結構 Struct、讀寫檔案
+* `HW07 - 簡易成績登記冊` : 結構 Struct、讀寫檔案
