@@ -13,3 +13,5 @@
 * `HW06 - 圖形面積計算機` : 函式 Function、一級函式 First-Class Function、自訂義型別、方法 Method
 
 * `HW07 - 簡易成績登記冊` : 結構 Struct、讀寫檔案
+
+* `HW08 - 學生名單清冊` : 例外處理機制、延遲執行 defer 、恐慌中斷 panic、恢復流程 recover、綜合使用
