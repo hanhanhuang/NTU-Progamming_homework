@@ -95,7 +95,11 @@ func deleteStudent() {
 	var checkNum int
 
 	defer handleException()
-
+	
+	if Hasstudent() != true {
+		panic("目前尚未有學生資料")
+	}
+	
 	fmt.Println(strings.Repeat("-", 10))
 	showStudent()
 	fmt.Println(strings.Repeat("-", 10))
